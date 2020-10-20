@@ -1,9 +1,13 @@
 import { Entity, Column, PrimaryGeneratedColumn } from "typeorm";
+import { RegUsers } from "./reg_users.model";
 
-@Entity({name:'usuarios'})
+@Entity({ name: "usuarios" })
 export class User {
   @PrimaryGeneratedColumn()
   id: number;
+
+  @Column()
+  id_reg_usuarios: number;
 
   @Column()
   nombre: string;
@@ -20,15 +24,6 @@ export class User {
   @Column()
   usuario_ex: string;
 
-  @Column({type:"timestamp", default: () => "CURRENT_TIMESTAMP"})
+  @Column({ type: "timestamp", default: () => "CURRENT_TIMESTAMP" })
   hora: Date;
 }
-export const UserKeys = [
-  "id",
-  "nombre",
-  "sexo",
-  "institucion",
-  "usuario_in",
-  "usuario_ex",
-  "hora",
-];
