@@ -3,6 +3,7 @@
 -- Host: localhost    Database: biblioteca_uas
 -- ------------------------------------------------------
 -- Server version	8.0.21
+USE biblioteca_uas;
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;

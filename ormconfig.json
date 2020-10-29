@@ -4,7 +4,7 @@
     "port": 3306,
     "username": "root",
     "password": "110211",
-    "database": "biblioteca_torre",
+    "database": "biblioteca_uas",
     "synchronize": false,
     "entities": [
         "src/models/**/*.ts"

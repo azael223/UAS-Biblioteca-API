@@ -19,7 +19,7 @@ Router.use("/RegCubiculos", RegCubiculosRouter);
 Router.use("/RegCubiculosUsuarios", RegCubiculosUsuarioRouter);
 Router.use('/RegRecElec', RegRecElecRouter);
 Router.use('/RegRecElecUsuarios', RegRecElecUsuarioRouter);
-Router.use('/RegRecUsuarios', RegUsuarioRouter);
+Router.use('/RegUsuarios', RegUsuarioRouter);
 Router.use('/Registros', RegistroRouter);
 
 export { Router };
