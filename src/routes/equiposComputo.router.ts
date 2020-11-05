@@ -6,6 +6,6 @@ const _equipoComputoCtrl = new EquipoComputoController();
 
 EquiposComputoRouter.get("/:id", _equipoComputoCtrl.getOne);
 EquiposComputoRouter.get("/", _equipoComputoCtrl.getAll);
-EquiposComputoRouter.post("/addEquipoComputo", _equipoComputoCtrl.add);
+EquiposComputoRouter.post("/CreateEquipoComputo", _equipoComputoCtrl.create);
 
 export { EquiposComputoRouter };

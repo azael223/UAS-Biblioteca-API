@@ -6,6 +6,6 @@ const _cubiculoCtrl = new CubiculoController();
 
 CubiculosRouter.get("/:id", _cubiculoCtrl.getOne);
 CubiculosRouter.get("/", _cubiculoCtrl.getAll);
-CubiculosRouter.post("/addCubiculo", _cubiculoCtrl.add);
+CubiculosRouter.post("/CreateCubiculo", _cubiculoCtrl.create);
 
 export { CubiculosRouter };

@@ -6,6 +6,6 @@ const _registroCtrl = new RegistroController();
 
 RegistroRouter.get("/:id", _registroCtrl.getOne);
 RegistroRouter.get("/", _registroCtrl.getAll);
-RegistroRouter.post("/addRegistro", _registroCtrl.add);
+RegistroRouter.post("/CreateRegistro", _registroCtrl.create);
 
 export { RegistroRouter };

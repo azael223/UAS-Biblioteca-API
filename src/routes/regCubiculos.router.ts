@@ -6,6 +6,6 @@ const _regCubiculosCtrl = new RegCubiculosController();
 
 RegCubiculosRouter.get("/:id", _regCubiculosCtrl.getOne);
 RegCubiculosRouter.get("/", _regCubiculosCtrl.getAll);
-RegCubiculosRouter.post("/addRegCubiculos", _regCubiculosCtrl.add);
+RegCubiculosRouter.post("/CreateRegCubiculos", _regCubiculosCtrl.create);
 
 export { RegCubiculosRouter };

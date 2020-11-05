@@ -6,6 +6,6 @@ const _regUsuarioCtrl = new RegUsuarioController();
 
 RegUsuarioRouter.get("/:id", _regUsuarioCtrl.getOne);
 RegUsuarioRouter.get("/", _regUsuarioCtrl.getAll);
-RegUsuarioRouter.post("/addRegUsuario", _regUsuarioCtrl.add);
+RegUsuarioRouter.post("/CreateRegUsuario", _regUsuarioCtrl.create);
 
 export { RegUsuarioRouter };
