@@ -6,6 +6,8 @@ const _regRecElecCtrl = new RegRecElecController();
 
 RegRecElecRouter.get("/:id", _regRecElecCtrl.getOne);
 RegRecElecRouter.get("/", _regRecElecCtrl.getAll);
-RegRecElecRouter.post("/CreateRegRecElec", _regRecElecCtrl.create);
+RegRecElecRouter.post("/Create", _regRecElecCtrl.create);
+RegRecElecRouter.post("/Update", _regRecElecCtrl.update)
+RegRecElecRouter.delete("/Delete", _regRecElecCtrl.delete)
 
 export { RegRecElecRouter };

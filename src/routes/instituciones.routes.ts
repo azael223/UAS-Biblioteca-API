@@ -6,6 +6,8 @@ const _institucionCtrl = new InstitucionController();
 
 InstitucionRouter.get("/:id", _institucionCtrl.getOne);
 InstitucionRouter.get("/", _institucionCtrl.getAll);
-InstitucionRouter.post("/CreateInstitucion", _institucionCtrl.create);
+InstitucionRouter.post("/Create", _institucionCtrl.create);
+InstitucionRouter.post("/Update", _institucionCtrl.update);
+InstitucionRouter.delete("/Delete", _institucionCtrl.delete);
 
 export { InstitucionRouter };

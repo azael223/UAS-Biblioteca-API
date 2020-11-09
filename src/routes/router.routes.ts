@@ -1,13 +1,13 @@
 import express from "express";
-import { CubiculosRouter } from "./cubiculos.router";
-import { EquiposComputoRouter } from "./equiposComputo.router";
-import { InstitucionRouter } from "./instituciones.router";
-import { RegCubiculosRouter } from "./regCubiculos.router";
-import { RegCubiculosUsuarioRouter } from "./regCubiculosUsuarios.router";
-import { RegRecElecRouter } from "./regRecElec.router";
-import { RegRecElecUsuarioRouter } from "./regRecElecUsuarios.router";
-import { RegUsuarioRouter } from "./regUsuarios.router";
-import { RegistroRouter } from "./registros.router";
+import { CubiculosRouter } from "./cubiculos.routes";
+import { EquiposComputoRouter } from "./equiposComputo.routes";
+import { InstitucionRouter } from "./instituciones.routes";
+import { RegCubiculosRouter } from "./regCubiculos.routes";
+import { RegCubiculosUsuarioRouter } from "./regCubiculosUsuarios.routes";
+import { RegRecElecRouter } from "./regRecElec.routes";
+import { RegRecElecUsuarioRouter } from "./regRecElecUsuarios.routes";
+import { RegUsuarioRouter } from "./regUsuarios.routes";
+import { RegistroRouter } from "./registros.routes";
 
 const Router = express.Router();
 
