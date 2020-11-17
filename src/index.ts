@@ -13,12 +13,12 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 app.use(morgan("common"));
-app.use(Router);
+app.use('/api',Router);
 
 /* Config */
 const config = {
   host: "localhost",
-  port: 8050,
+  port: 8000,
 };
 
 /* Server */

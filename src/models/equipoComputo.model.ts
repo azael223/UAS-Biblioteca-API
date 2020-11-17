@@ -6,6 +6,9 @@ export class EquipoComputoModel {
   id: number;
 
   @Column()
+  nombre:string
+
+  @Column()
   status: string;
 
   @Column()
