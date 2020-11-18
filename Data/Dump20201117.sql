@@ -30,7 +30,7 @@ CREATE TABLE `cubiculos` (
   `creadoEn` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `actualizadoEn` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `cubiculos` (
 
 LOCK TABLES `cubiculos` WRITE;
 /*!40000 ALTER TABLE `cubiculos` DISABLE KEYS */;
-INSERT INTO `cubiculos` VALUES (1,'Cubiculo 1','2020-11-17 06:08:29','2020-11-17 06:08:29'),(2,'Cubiculo 2','2020-11-17 06:23:21','2020-11-17 06:23:21'),(3,'Cubiculo 3','2020-11-17 06:24:51','2020-11-17 06:24:51');
+INSERT INTO `cubiculos` VALUES (3,'Cubiculo 3','2020-11-17 06:24:51','2020-11-17 06:24:51'),(4,'Cubiculo 3','2020-11-18 03:17:58','2020-11-18 03:17:58'),(5,'Cubiculo 4','2020-11-18 04:27:40','2020-11-18 04:27:40'),(6,'Cubiculo Nuevo','2020-11-18 04:28:19','2020-11-18 04:28:19');
 /*!40000 ALTER TABLE `cubiculos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -57,7 +57,7 @@ CREATE TABLE `equipos_computo` (
   `creadoEn` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `actualizadoEn` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -66,7 +66,7 @@ CREATE TABLE `equipos_computo` (
 
 LOCK TABLES `equipos_computo` WRITE;
 /*!40000 ALTER TABLE `equipos_computo` DISABLE KEYS */;
-INSERT INTO `equipos_computo` VALUES (1,'Equipo 1','A','2020-11-17 07:21:58','2020-11-17 07:21:58'),(2,'Equipo 2','A','2020-11-17 07:23:39','2020-11-17 07:23:39');
+INSERT INTO `equipos_computo` VALUES (2,'Equipo 1','A','2020-11-17 07:23:39','2020-11-18 06:09:36'),(3,'Equipo 2','A','2020-11-18 03:58:07','2020-11-18 06:09:33');
 /*!40000 ALTER TABLE `equipos_computo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -84,7 +84,7 @@ CREATE TABLE `instituciones` (
   `creadoEn` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `actualizadoEn` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -93,7 +93,7 @@ CREATE TABLE `instituciones` (
 
 LOCK TABLES `instituciones` WRITE;
 /*!40000 ALTER TABLE `instituciones` DISABLE KEYS */;
-INSERT INTO `instituciones` VALUES (1,'Universidad Autónoma de Sinaloa','UAS','2020-11-17 08:02:22','2020-11-17 08:02:22');
+INSERT INTO `instituciones` VALUES (1,'Universidad Autónoma de Sinaloa','UAS','2020-11-18 03:39:26','2020-11-18 03:39:26');
 /*!40000 ALTER TABLE `instituciones` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -111,7 +111,7 @@ CREATE TABLE `reg_cubiculos` (
   `creadoEn` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `actualizadoEn` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -120,6 +120,7 @@ CREATE TABLE `reg_cubiculos` (
 
 LOCK TABLES `reg_cubiculos` WRITE;
 /*!40000 ALTER TABLE `reg_cubiculos` DISABLE KEYS */;
+INSERT INTO `reg_cubiculos` VALUES (2,'Prueba','Prueba','2020-11-18 05:36:39','2020-11-18 05:36:39');
 /*!40000 ALTER TABLE `reg_cubiculos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -137,7 +138,7 @@ CREATE TABLE `reg_rec_elec` (
   `creadoEn` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `actualizadoEn` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -146,6 +147,7 @@ CREATE TABLE `reg_rec_elec` (
 
 LOCK TABLES `reg_rec_elec` WRITE;
 /*!40000 ALTER TABLE `reg_rec_elec` DISABLE KEYS */;
+INSERT INTO `reg_rec_elec` VALUES (1,'Prueba','M','2020-11-18 06:23:50','2020-11-18 06:23:50');
 /*!40000 ALTER TABLE `reg_rec_elec` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -164,7 +166,7 @@ CREATE TABLE `registros` (
   `creadoEn` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `actualizadoEn` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -173,6 +175,7 @@ CREATE TABLE `registros` (
 
 LOCK TABLES `registros` WRITE;
 /*!40000 ALTER TABLE `registros` DISABLE KEYS */;
+INSERT INTO `registros` VALUES (1,'Prueba','Prueba','M','2020-11-18 06:06:07','2020-11-18 06:06:07');
 /*!40000 ALTER TABLE `registros` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -296,4 +299,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-11-17  1:07:10
+-- Dump completed on 2020-11-17 23:55:43
