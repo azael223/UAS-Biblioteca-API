@@ -40,11 +40,13 @@ export class Controller {
   update = async (req: Request, res: Response): Promise<Response> => {
     try {
       const data: any = await getRepository(this.Model).findOne(
-        Number(req.body["id"])
+        req.body["id"]
       );
-      Object.keys(data).forEach((key) =>
-        key in req.body ? (data[key] = req.body[key]) : ""
+      console.log(data)
+      Object.keys(req.body).forEach((key) =>
+        key in data ? (data[key] = req.body[key]) : ""
       );
+      console.log
       const result = await getRepository(this.Model).save(data);
       return res.json(result);
     } catch (err) {
