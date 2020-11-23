@@ -17,7 +17,7 @@ export class Controller {
   getOne = async (req: Request, res: Response): Promise<Response> => {
     try {
       const data = await getRepository(this.Model).findOne(
-        req.params["id"]
+        Number(req.params["id"])
       );
       return res.json(data);
     } catch (err) {
@@ -27,9 +27,10 @@ export class Controller {
 
   getAll = async (req: Request, res: Response): Promise<Response> => {
     try {
+      console.log(req.query.filters)
       const data =
-        req.params && req.params["where"]
-          ? await getRepository(this.Model).find(JSON.parse(req.params["where"]))
+        req.query && req.query["filters"]
+          ? await getRepository(this.Model).find(req.query.filters)
           : await getRepository(this.Model).find();
       return res.json(data);
     } catch (err) {
@@ -40,10 +41,10 @@ export class Controller {
   update = async (req: Request, res: Response): Promise<Response> => {
     try {
       const data: any = await getRepository(this.Model).findOne(
-        req.body["id"]
+        Number(req.body["id"])
       );
-      Object.keys(data).forEach((key) =>
-        key in req.body ? (data[key] = req.body[key]) : ""
+      Object.keys(req.body).forEach((key) =>
+        key in data ? (data[key] = req.body[key]) : ""
       );
       const result = await getRepository(this.Model).save(data);
       return res.json(result);
