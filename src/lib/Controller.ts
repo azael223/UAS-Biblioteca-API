@@ -17,7 +17,7 @@ export class Controller {
   getOne = async (req: Request, res: Response): Promise<Response> => {
     try {
       const data = await getRepository(this.Model).findOne(
-        Number(req.params["id"])
+        req.params["id"]
       );
       return res.json(data);
     } catch (err) {
@@ -40,7 +40,7 @@ export class Controller {
   update = async (req: Request, res: Response): Promise<Response> => {
     try {
       const data: any = await getRepository(this.Model).findOne(
-        Number(req.body["id"])
+        req.body["id"]
       );
       Object.keys(data).forEach((key) =>
         key in req.body ? (data[key] = req.body[key]) : ""
