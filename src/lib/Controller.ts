@@ -27,11 +27,11 @@ export class Controller {
 
   getAll = async (req: Request, res: Response): Promise<Response> => {
     try {
-      console.log(req.query.filters)
-      const data =
-        req.query && req.query["filters"]
-          ? await getRepository(this.Model).find(req.query.filters)
-          : await getRepository(this.Model).find();
+      let filters: string =
+        typeof req.query.filters === "string" ? req.query.filters : "";
+      filters = filters ? JSON.parse(filters) : "";
+      console.log(filters);
+      const data = await getRepository(this.Model).find(filters);
       return res.json(data);
     } catch (err) {
       return res.json(err);
