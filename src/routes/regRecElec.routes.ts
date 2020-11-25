@@ -8,6 +8,6 @@ RegRecElecRouter.get("/:id", _regRecElecCtrl.getOne);
 RegRecElecRouter.get("/", _regRecElecCtrl.getAll);
 RegRecElecRouter.post("/Create", _regRecElecCtrl.create);
 RegRecElecRouter.post("/Update", _regRecElecCtrl.update)
-RegRecElecRouter.delete("/Delete", _regRecElecCtrl.delete)
+RegRecElecRouter.delete("/Delete/:id", _regRecElecCtrl.delete)
 
 export { RegRecElecRouter };

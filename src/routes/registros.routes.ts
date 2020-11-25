@@ -8,6 +8,6 @@ RegistroRouter.get("/:id", _registroCtrl.getOne);
 RegistroRouter.get("/", _registroCtrl.getAll);
 RegistroRouter.post("/Create", _registroCtrl.create);
 RegistroRouter.post("/Update", _registroCtrl.update);
-RegistroRouter.delete("/Delete", _registroCtrl.delete);
+RegistroRouter.delete("/Delete/:id", _registroCtrl.delete);
 
 export { RegistroRouter };

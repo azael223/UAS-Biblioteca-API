@@ -8,6 +8,6 @@ InstitucionRouter.get("/:id", _institucionCtrl.getOne);
 InstitucionRouter.get("/", _institucionCtrl.getAll);
 InstitucionRouter.post("/Create", _institucionCtrl.create);
 InstitucionRouter.post("/Update", _institucionCtrl.update);
-InstitucionRouter.delete("/Delete", _institucionCtrl.delete);
+InstitucionRouter.delete("/Delete/:id", _institucionCtrl.delete);
 
 export { InstitucionRouter };

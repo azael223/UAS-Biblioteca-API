@@ -8,6 +8,6 @@ CubiculosRouter.get("/:id", _cubiculoCtrl.getOne);
 CubiculosRouter.get("/", _cubiculoCtrl.getAll);
 CubiculosRouter.post("/Create", _cubiculoCtrl.create);
 CubiculosRouter.post("/Update",_cubiculoCtrl.update)
-CubiculosRouter.delete("/Delete", _cubiculoCtrl.delete)
+CubiculosRouter.delete("/Delete/:id", _cubiculoCtrl.delete)
 
 export { CubiculosRouter };

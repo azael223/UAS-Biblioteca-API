@@ -8,6 +8,6 @@ RegCubiculosRouter.get("/:id", _regCubiculosCtrl.getOne);
 RegCubiculosRouter.get("/", _regCubiculosCtrl.getAll);
 RegCubiculosRouter.post("/Create", _regCubiculosCtrl.create);
 RegCubiculosRouter.post("/Update", _regCubiculosCtrl.update);
-RegCubiculosRouter.delete("/Delete", _regCubiculosCtrl.delete);
+RegCubiculosRouter.delete("/Delete/:id", _regCubiculosCtrl.delete);
 
 export { RegCubiculosRouter };

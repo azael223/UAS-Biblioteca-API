@@ -8,6 +8,6 @@ EquiposComputoRouter.get("/:id", _equipoComputoCtrl.getOne);
 EquiposComputoRouter.get("/", _equipoComputoCtrl.getAll);
 EquiposComputoRouter.post("/Create", _equipoComputoCtrl.create);
 EquiposComputoRouter.post("/Update", _equipoComputoCtrl.update);
-EquiposComputoRouter.delete("/Delete", _equipoComputoCtrl.delete);
+EquiposComputoRouter.delete("/Delete/:id", _equipoComputoCtrl.delete);
 
 export { EquiposComputoRouter };

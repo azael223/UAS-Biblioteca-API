@@ -27,10 +27,10 @@ export class Controller {
 
   getAll = async (req: Request, res: Response): Promise<Response> => {
     try {
-      const data =
-        req.params && req.params["where"]
-          ? await getRepository(this.Model).find(JSON.parse(req.params["where"]))
-          : await getRepository(this.Model).find();
+      let filters: string =
+        typeof req.query.filters === "string" ? req.query.filters : "";
+      filters = filters ? JSON.parse(filters) : "";
+      const data = await getRepository(this.Model).find(filters);
       return res.json(data);
     } catch (err) {
       return res.json(err);
@@ -42,7 +42,6 @@ export class Controller {
       const data: any = await getRepository(this.Model).findOne(
         req.body["id"]
       );
-      console.log(data)
       Object.keys(req.body).forEach((key) =>
         key in data ? (data[key] = req.body[key]) : ""
       );
@@ -56,7 +55,7 @@ export class Controller {
 
   delete = async (req: Request, res: Response): Promise<Response> => {
     try {
-      const data = await getRepository(this.Model).findOne(req.body);
+      const data = await getRepository(this.Model).findOne(req.params["id"]);
       const result = await getRepository(this.Model).remove(data);
       return res.json(result);
     } catch (err) {
