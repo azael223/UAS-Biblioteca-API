@@ -2,7 +2,7 @@ import { Entity, PrimaryColumn, PrimaryGeneratedColumn, Column } from "typeorm";
 
 @Entity({ name: "usuarios_registros" })
 export class RegUsuarioModel {
-  @Column()
+  @PrimaryColumn()
   idRegistro: number;
 
   @PrimaryGeneratedColumn()
@@ -22,4 +22,7 @@ export class RegUsuarioModel {
 
   @Column()
   creadoEn: string;
+
+  @Column()
+  terminadoEn:string;
 }
