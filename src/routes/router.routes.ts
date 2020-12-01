@@ -8,6 +8,7 @@ import { RegRecElecRouter } from "./regRecElec.routes";
 import { RegRecElecUsuarioRouter } from "./regRecElecUsuarios.routes";
 import { RegUsuarioRouter } from "./regUsuarios.routes";
 import { RegistroRouter } from "./registros.routes";
+import { UsuariosRouter } from "./usuarios.routes";
 
 const Router = express.Router();
 
@@ -17,9 +18,10 @@ Router.use("/EquiposComputo", EquiposComputoRouter);
 Router.use("/Instituciones", InstitucionRouter);
 Router.use("/RegCubiculos", RegCubiculosRouter);
 Router.use("/RegCubiculosUsuarios", RegCubiculosUsuarioRouter);
-Router.use('/RegRecElec', RegRecElecRouter);
-Router.use('/RegRecElecUsuarios', RegRecElecUsuarioRouter);
-Router.use('/RegUsuarios', RegUsuarioRouter);
-Router.use('/Registros', RegistroRouter);
+Router.use("/RegRecElec", RegRecElecRouter);
+Router.use("/RegRecElecUsuarios", RegRecElecUsuarioRouter);
+Router.use("/RegUsuarios", RegUsuarioRouter);
+Router.use("/Registros", RegistroRouter);
+Router.use("/Usuarios", UsuariosRouter);
 
 export { Router };
