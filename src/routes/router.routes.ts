@@ -9,11 +9,12 @@ import { RegRecElecUsuarioRouter } from "./regRecElecUsuarios.routes";
 import { RegUsuarioRouter } from "./regUsuarios.routes";
 import { RegistroRouter } from "./registros.routes";
 import { UsuariosRouter } from "./usuarios.routes";
+import { Auth } from "../auth";
 
 const Router = express.Router();
 
 /* Routes */
-Router.use("/Cubiculos", CubiculosRouter);
+Router.use("/Cubiculos", Auth.verifyToken, CubiculosRouter);
 Router.use("/EquiposComputo", EquiposComputoRouter);
 Router.use("/Instituciones", InstitucionRouter);
 Router.use("/RegCubiculos", RegCubiculosRouter);
