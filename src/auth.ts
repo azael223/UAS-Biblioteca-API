@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from "express";
-import { Error } from "./models/handlers/error.model";
+import { Error } from "./models/handlers/Error.model";
 import { verify } from "jsonwebtoken";
 
 export class Auth {

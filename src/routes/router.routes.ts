@@ -15,14 +15,18 @@ const Router = express.Router();
 
 /* Routes */
 Router.use("/Cubiculos", Auth.verifyToken, CubiculosRouter);
-Router.use("/EquiposComputo", EquiposComputoRouter);
-Router.use("/Instituciones", InstitucionRouter);
-Router.use("/RegCubiculos", RegCubiculosRouter);
-Router.use("/RegCubiculosUsuarios", RegCubiculosUsuarioRouter);
-Router.use("/RegRecElec", RegRecElecRouter);
-Router.use("/RegRecElecUsuarios", RegRecElecUsuarioRouter);
-Router.use("/RegUsuarios", RegUsuarioRouter);
-Router.use("/Registros", RegistroRouter);
-Router.use("/Usuarios", UsuariosRouter);
+Router.use("/EquiposComputo", Auth.verifyToken, EquiposComputoRouter);
+Router.use("/Instituciones", Auth.verifyToken, InstitucionRouter);
+Router.use("/RegCubiculos", Auth.verifyToken, RegCubiculosRouter);
+Router.use(
+  "/RegCubiculosUsuarios",
+  Auth.verifyToken,
+  RegCubiculosUsuarioRouter
+);
+Router.use("/RegRecElec", Auth.verifyToken, RegRecElecRouter);
+Router.use("/RegRecElecUsuarios", Auth.verifyToken, RegRecElecUsuarioRouter);
+Router.use("/RegUsuarios", Auth.verifyToken, RegUsuarioRouter);
+Router.use("/Registros", Auth.verifyToken, RegistroRouter);
+Router.use("/Usuarios", Auth.verifyToken, UsuariosRouter);
 
 export { Router };
