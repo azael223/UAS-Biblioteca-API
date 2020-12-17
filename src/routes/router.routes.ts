@@ -27,6 +27,7 @@ Router.use("/RegRecElec", Auth.verifyToken, RegRecElecRouter);
 Router.use("/RegRecElecUsuarios", Auth.verifyToken, RegRecElecUsuarioRouter);
 Router.use("/RegUsuarios", Auth.verifyToken, RegUsuarioRouter);
 Router.use("/Registros", Auth.verifyToken, RegistroRouter);
-Router.use("/Usuarios", Auth.verifyToken, UsuariosRouter);
+Router.use("/Usuarios", UsuariosRouter);
 
 export { Router };
+

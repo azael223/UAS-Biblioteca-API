@@ -1,4 +1,12 @@
-import { Entity, PrimaryColumn, PrimaryGeneratedColumn, Column } from "typeorm";
+import {
+  Entity,
+  PrimaryColumn,
+  PrimaryGeneratedColumn,
+  Column,
+  ManyToOne,
+} from "typeorm";
+import { InstitucionModel } from "./institucion.model";
+import { RegRecElecModel } from "./regRecElec.model";
 
 @Entity({ name: "usuarios_reg_rec_elec" })
 export class RegRecElecUsuarioModel {

@@ -4,6 +4,7 @@ import { EquipoComputoController } from "../controllers/equipoComputo.controller
 const EquiposComputoRouter = Router();
 const _equipoComputoCtrl = new EquipoComputoController();
 
+EquiposComputoRouter.get("/Count", _equipoComputoCtrl.count);
 EquiposComputoRouter.get("/:id", _equipoComputoCtrl.getOne);
 EquiposComputoRouter.get("/", _equipoComputoCtrl.getAll);
 EquiposComputoRouter.post("/Create", _equipoComputoCtrl.create);

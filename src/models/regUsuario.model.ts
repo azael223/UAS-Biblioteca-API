@@ -1,8 +1,16 @@
-import { Entity, PrimaryColumn, PrimaryGeneratedColumn, Column } from "typeorm";
+import {
+  Entity,
+  PrimaryColumn,
+  PrimaryGeneratedColumn,
+  Column,
+  ManyToOne,
+} from "typeorm";
+import { InstitucionModel } from "./institucion.model";
+import { RegistroModel } from "./registro.model";
 
 @Entity({ name: "usuarios_registros" })
 export class RegUsuarioModel {
-  @Column()
+  @Column() 
   idRegistro: number;
 
   @PrimaryGeneratedColumn()
@@ -24,5 +32,5 @@ export class RegUsuarioModel {
   creadoEn: string;
 
   @Column()
-  terminadoEn:string;
+  terminadoEn: string;
 }

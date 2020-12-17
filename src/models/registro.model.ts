@@ -16,4 +16,7 @@ export class RegistroModel {
 
   @Column()
   creadoEn: string;
+
+  @Column()
+  actualizadoEn: string;
 }

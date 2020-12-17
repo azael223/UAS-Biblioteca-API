@@ -4,6 +4,7 @@ import { RegCubiculosController } from "../controllers/regCubiculos.controller";
 const RegCubiculosRouter = Router();
 const _regCubiculosCtrl = new RegCubiculosController();
 
+RegCubiculosRouter.get("/Count", _regCubiculosCtrl.count);
 RegCubiculosRouter.get("/:id", _regCubiculosCtrl.getOne);
 RegCubiculosRouter.get("/", _regCubiculosCtrl.getAll);
 RegCubiculosRouter.post("/Create", _regCubiculosCtrl.create);

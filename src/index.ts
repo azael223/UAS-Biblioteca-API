@@ -17,7 +17,7 @@ app.use('/api',Router);
 
 /* Config */
 const config = {
-  host: "localhost",
+  host: "0.0.0.0",
   port: 8000,
 };
 

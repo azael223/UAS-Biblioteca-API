@@ -4,6 +4,7 @@ import { RegUsuarioController } from "../controllers/regUsuario.controller";
 const RegUsuarioRouter = Router();
 const _regUsuarioCtrl = new RegUsuarioController();
 
+RegUsuarioRouter.get("/Count", _regUsuarioCtrl.count);
 RegUsuarioRouter.get("/:id", _regUsuarioCtrl.getOne);
 RegUsuarioRouter.get("/", _regUsuarioCtrl.getAll);
 RegUsuarioRouter.post("/Create", _regUsuarioCtrl.create);

@@ -4,7 +4,7 @@ import { Controller } from "../lib/Controller";
 import { getRepository } from "typeorm";
 import { sign } from "jsonwebtoken";
 import { Auth } from "../auth";
-import { Error } from "../models/handlers/error.model";
+import { Error } from "../models/handlers/Error.model";
 
 export class UsuarioController extends Controller {
   Model = UsuarioModel;
@@ -13,20 +13,24 @@ export class UsuarioController extends Controller {
       let data = await getRepository(UsuarioModel).findOne(req.body);
       if (data) {
         sign({ data }, Auth.SECRET_KEY, (err: any, token: any) => {
-          return res.json({ token });
+          if (err) {
+            return res.status(200).json({ error: err });
+          }
+          return res.status(200).json({ token, usuario: data });
         });
       } else {
-        return res.json(<Error>{
-          error: {
-            statusCode: 401,
+        return res.status(200).json({
+          error: <Error>{
+            statusCode: 200,
             name: "Error",
-            message: `No "Usuario" Found`,
+            message: `"Usuario" Not Found`,
             code: "NO_DATA_FOUND",
           },
         });
       }
     } catch (err) {
-      return res.json(err);
+      return res.status(200).json({ error: err });
     }
   };
+  verifyToken = async (req: Request, res: Response) => {};
 }
