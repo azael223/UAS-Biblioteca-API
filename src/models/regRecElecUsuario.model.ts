@@ -20,6 +20,9 @@ export class RegRecElecUsuarioModel {
   idInstitucion: number;
 
   @Column()
+  idCarrera: number;
+
+  @Column()
   idEquipoComputo: number;
 
   @Column()

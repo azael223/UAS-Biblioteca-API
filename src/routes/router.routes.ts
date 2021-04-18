@@ -9,6 +9,7 @@ import { RegRecElecUsuarioRouter } from "./regRecElecUsuarios.routes";
 import { RegUsuarioRouter } from "./regUsuarios.routes";
 import { RegistroRouter } from "./registros.routes";
 import { UsuariosRouter } from "./usuarios.routes";
+import { CarrerasRouter } from "./carrera.routes"
 import { Auth } from "../auth";
 
 const Router = express.Router();
@@ -27,6 +28,7 @@ Router.use("/RegRecElec", Auth.verifyToken, RegRecElecRouter);
 Router.use("/RegRecElecUsuarios", Auth.verifyToken, RegRecElecUsuarioRouter);
 Router.use("/RegUsuarios", Auth.verifyToken, RegUsuarioRouter);
 Router.use("/Registros", Auth.verifyToken, RegistroRouter);
+Router.use("/Carreras", Auth.verifyToken, CarrerasRouter);
 Router.use("/Usuarios", UsuariosRouter);
 
 export { Router };

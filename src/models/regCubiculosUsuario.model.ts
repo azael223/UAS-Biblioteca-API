@@ -12,6 +12,9 @@ export class RegCubiculosUsuarioModel {
   idInstitucion: number;
 
   @Column()
+  idCarrera: number;
+
+  @Column()
   idCubiculo: number;
 
   @Column()

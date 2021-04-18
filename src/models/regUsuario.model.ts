@@ -20,6 +20,9 @@ export class RegUsuarioModel {
   idInstitucion: number;
 
   @Column()
+  idCarrera: number;
+
+  @Column()
   nombre: string;
 
   @Column()

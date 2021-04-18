@@ -1,13 +1,20 @@
 import { Entity, PrimaryColumn, PrimaryGeneratedColumn, Column } from "typeorm";
 
-@Entity({ name: "instituciones" })
-export class InstitucionModel {
+@Entity({ name: "carreras" })
+export class CarreraModel {
   @PrimaryGeneratedColumn()
   id: number;
+
+  @Column()
+  idInstitucion: number;
 
   @Column()
   nombre: string;
 
   @Column()
   creadoEn: string;
+
+  @Column()
+  actualizadoEn: string;
+
 }
